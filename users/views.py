@@ -17,7 +17,7 @@ def signup(request):
                 user = User.objects.create_user(username=request.POST['email'],
                 password=request.POST['password1'])
                 user.save()
-                return HttpResponse('User Created Succesfully')
+                return HttpResponse('User Created Succesfully') 
             except:
                 return render(request, 'signup.html',{
                     "error": 'Email Already Exist'
